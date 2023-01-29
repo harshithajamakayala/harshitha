@@ -1,0 +1,108 @@
+2023-01-28 09:34:05.703  INFO 2340 --- [restartedMain] c.training.app.MyTrainingAppApplication  : Starting MyTrainingAppApplication using Java 17.0.5 on INLEN8520075820 with PID 2340 (C:\MySpringBootWork\MyTrainingApp\bin\main started by hjamakay in C:\MySpringBootWork\MyTrainingApp)
+2023-01-28 09:34:05.713  INFO 2340 --- [restartedMain] c.training.app.MyTrainingAppApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-01-28 09:34:07.081  INFO 2340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-28 09:34:07.082  INFO 2340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-01-28 09:34:07.150  INFO 2340 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-28 09:34:07.333  INFO 2340 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 09:34:07.389  INFO 2340 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-28 09:34:07.546  INFO 2340 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-28 09:34:07.635  INFO 2340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-28 09:34:07.814  INFO 2340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-28 09:34:07.834  INFO 2340 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 09:34:08.430  INFO 2340 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 09:34:08.442  INFO 2340 --- [restartedMain] c.t.app.controller.CourseRestController  : ---Course Controller Called --
+2023-01-28 09:34:08.442  WARN 2340 --- [restartedMain] c.t.app.controller.CourseRestController  : ---Course Controller Called --
+2023-01-28 09:34:08.760  INFO 2340 --- [restartedMain] c.t.a.controller.StudentRestController   : student rest controller
+2023-01-28 09:34:08.855  WARN 2340 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 09:34:09.192  INFO 2340 --- [restartedMain] c.training.app.MyTrainingAppApplication  : Started MyTrainingAppApplication in 4.036 seconds (JVM running for 4.758)
+2023-01-28 09:34:57.563  INFO 2340 --- [http-nio-2025-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28 09:34:57.735  INFO 2340 --- [http-nio-2025-exec-1] c.t.a.controller.StudentRestController   :  --->> Instructor saved Student(stdCode=1, studentName=meena, domain=java, profile=Profile(email=meena@gmail.com, phone=9298346845, address=Delhi, cityName=Secunderbad), course=null)
+2023-01-28 09:35:51.066  INFO 2340 --- [http-nio-2025-exec-3] c.t.a.controller.StudentRestController   :  --->> Instructor saved Student(stdCode=2, studentName=leela, domain=python, profile=Profile(email=leela@gmail.com, phone=9348346856, address=Delhi, cityName=south Delhi), course=null)
+2023-01-28 09:36:43.540  INFO 2340 --- [http-nio-2025-exec-4] c.t.a.controller.StudentRestController   :  --->> Instructor saved Student(stdCode=3, studentName=revi, domain=python, profile=Profile(email=revi@gmail.com, phone=9333343676, address=Mumbai, cityName=navi Mumbai), course=null)
+2023-01-28 09:37:26.507  INFO 2340 --- [http-nio-2025-exec-5] c.t.a.controller.StudentRestController   :  --->> Instructor saved Student(stdCode=4, studentName=harshitha, domain=python, profile=Profile(email=harshitha@gmail.com, phone=9332573749, address=Hyderabad, cityName=Hyderabad), course=null)
+2023-01-28 12:23:34.203  INFO 2340 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-28 12:23:34.209  INFO 2340 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-01-28 12:23:34.239  INFO 2340 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-28 12:23:34.248  INFO 2340 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-28 12:23:34.422  INFO 2340 --- [restartedMain] c.training.app.MyTrainingAppApplication  : Starting MyTrainingAppApplication using Java 17.0.5 on INLEN8520075820 with PID 2340 (C:\MySpringBootWork\MyTrainingApp\bin\main started by hjamakay in C:\MySpringBootWork\MyTrainingApp)
+2023-01-28 12:23:34.424  INFO 2340 --- [restartedMain] c.training.app.MyTrainingAppApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-01-28 12:23:34.842  INFO 2340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-28 12:23:34.842  INFO 2340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-01-28 12:23:34.864  INFO 2340 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-28 12:23:34.907  INFO 2340 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 12:23:34.919  INFO 2340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-01-28 12:23:35.095  INFO 2340 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-01-28 12:23:35.097  INFO 2340 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 12:23:35.190  INFO 2340 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 12:23:35.199  INFO 2340 --- [restartedMain] c.t.app.controller.CourseRestController  : ---Course Controller Called --
+2023-01-28 12:23:35.200  WARN 2340 --- [restartedMain] c.t.app.controller.CourseRestController  : ---Course Controller Called --
+2023-01-28 12:23:35.280  INFO 2340 --- [restartedMain] c.t.a.controller.StudentRestController   : student rest controller
+2023-01-28 12:23:35.348  WARN 2340 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 12:23:35.517  INFO 2340 --- [restartedMain] c.training.app.MyTrainingAppApplication  : Started MyTrainingAppApplication in 1.158 seconds (JVM running for 10171.114)
+2023-01-28 12:24:10.710  INFO 2340 --- [http-nio-2025-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28 12:24:10.798 ERROR 2340 --- [http-nio-2025-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.training.app.entity.Student with id 3] with root cause
+
+javax.persistence.EntityNotFoundException: Unable to find com.training.app.entity.Student with id 3
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$JpaEntityNotFoundDelegate.handleEntityNotFound(EntityManagerFactoryBuilderImpl.java:177) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.checkTargetState(AbstractLazyInitializer.java:298) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:187) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:322) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:45) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:95) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at com.training.app.entity.Student$HibernateProxy$iYTwgOE7.getStudentName(Unknown Source) ~[main/:na]
+	at com.training.app.util.StudentDTOConvertor.getStudentDTO(StudentDTOConvertor.java:20) ~[main/:na]
+	at com.training.app.controller.StudentRestController.getStudentById(StudentRestController.java:85) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.71.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.71.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-01-28 12:24:51.429  INFO 2340 --- [http-nio-2025-exec-2] c.t.a.controller.StudentRestController   :  --->> Instructor saved Student(stdCode=1, studentName=harshitha, domain=python, profile=Profile(email=harshitha@gmail.com, phone=9332573749, address=Hyderabad, cityName=Hyderabad), course=null)
+2023-01-28 12:26:50.315  INFO 2340 --- [http-nio-2025-exec-9] c.t.a.controller.StudentRestController   :  --->> Instructor saved Student(stdCode=2, studentName=revi, domain=python, profile=Profile(email=revi@gmail.com, phone=9333343676, address=Mumbai, cityName=navi Mumbai), course=null)
+2023-01-28 12:26:59.206  INFO 2340 --- [http-nio-2025-exec-10] c.t.a.controller.StudentRestController   :  --->> Instructor saved Student(stdCode=3, studentName=leela, domain=python, profile=Profile(email=leela@gmail.com, phone=9348346856, address=Delhi, cityName=south Delhi), course=null)

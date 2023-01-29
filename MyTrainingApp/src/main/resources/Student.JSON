@@ -1,0 +1,10 @@
+{
+  "studentName":"meena",
+  "domain":"python",
+  "profile":{
+    "email":"meena@gmail.com",
+    "phone" : 9554983475,
+    "address": "MB-Mumbai",
+    "cityName":"Navi Mumbai"
+}
+}
