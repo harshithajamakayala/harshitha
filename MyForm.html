@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            text-align: center;
+            text-decoration-line: underline;
+            background-color: rgb(241, 172, 88);
+            margin-top: 2%;
+            margin-bottom: 3%;
+        }
+
+        fieldset {
+            background-color: bisque;
+            align-content: center;
+        }
+
+        .slider {
+            width: 500px;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let isValid = true;
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+
+            let nameError = document.getElementById("nameError");
+            let emailError = document.getElementById("emailError");
+
+            nameError.textContent = "";
+            emailError.textContent = "";
+
+            if (!name) {
+                nameError.textContent = "Name is required";
+                isValid = false;
+            }
+            if (!email) {
+                emailError.textContent = "Email is required";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+
+        function CheckPassword() {
+            var pass1 = document.getElementById('pass1');
+            var pass2 = document.getElementById('pass2');
+            var message = document.getElementById('passwordError');
+            var goodColor = "#66cc66";
+            var badColor = "#ff6666";
+
+            if (pass1.value.length > 5) {
+                pass1.style.backgroundColor = goodColor;
+                message.style.color = goodColor;
+                message.innerHTML = "character number ok!"
+            }
+            else {
+                pass1.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = " you have to enter at least 6 digit!"
+                return;
+            }
+
+            if (pass1.value == pass2.value) {
+                pass2.style.backgroundColor = goodColor;
+                message.style.color = goodColor;
+                message.innerHTML = "ok!"
+            }
+            else {
+                pass2.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = " These passwords don't match"
+            }
+        }
+        function dobValidate(birth) {
+
+
+            var today = new Date();
+            var nowyear = today.getFullYear();
+            var nowmonth = today.getMonth();
+            var nowday = today.getDate();
+            var b = document.getElementById('date').value;
+
+
+
+            var birth = new Date(b);;
+
+            var birthyear = birth.getFullYear();
+            var birthmonth = birth.getMonth();
+            var birthday = birth.getDate();
+
+            var age = nowyear - birthyear;
+            var age_month = nowmonth - birthmonth;
+            var age_day = nowday - birthday;
+
+
+            if (age > 100) {
+                //alert("Age cannot be more than 100 Years.Please enter correct age");
+                document.getElementById("errormsg").innerHTML = "Age cannot be more than 100 Years.Please enter correct age";
+                return false;
+            }
+            if (age_month < 0 || (age_month == 0 && age_day < 0)) {
+                age = parseInt(age) - 1;
+            }
+            if ((age == 18 && age_month <= 0 && age_day <= 0) || age < 18) {
+                //alert("Age should be more than 18 years.Please enter a valid Date of Birth");
+                document.getElementById("errormsg").innerHTML = "Age should be more than 18 years.Please enter a valid Date of Birth";
+                return false;
+            }
+        }
+
+        function populate(slct1, slct2) {
+            var s1 = document.getElementById(slct1);
+            var des = document.getElementById(slct2);
+            des.innerHTML = "";
+            if (s1.value == "Btech") {
+                var optionArray = ["java", "python", "oracle"];
+            } else if (s1.value == "Mtech") {
+                var optionArray = ["AI/ML", "PHP", "oracle"];
+            }
+            for (var option in optionArray) {
+                if (optionArray.hasOwnProperty(option)) {
+                    var pair = optionArray[option];
+                    var checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.name = pair;
+                    checkbox.value = pair;
+                    des.appendChild(checkbox);
+
+                    var label = document.createElement('label')
+                    label.htmlFor = pair;
+                    label.appendChild(document.createTextNode(pair));
+
+                    des.appendChild(label);
+                    des.appendChild(document.createElement("br"));
+                }
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <fieldset>
+        <table>
+            <tr>
+                <td>Enter Username</td>
+                <td><input type="text" name="name" placeholder="enter Username" id="name" onkeyup="validateForm()"></td>
+                <div class="error" id="nameError"></div>
+            </tr>
+            <tr>
+                <td>Enter Email:</td>
+                <td><input type="email" name="email" placeholder="enter email" id="email" onkeyup="validateForm()"></td>
+                <div class="error" id="emailError"></div>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" placeholder="enter password" id="pass1"
+                        onkeyup="CheckPassword(); return false;"></td>
+                <td>
+                    <p id="passwordError" style="color: red;"></p>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Re-type Password:</td>
+                <td><input type="password" name="password" placeholder="Re-type password" id="pass2"
+                        onkeyup="CheckPassword();return false"></td>
+                <td>
+                    <p id="passwordError" style="color: red;"></p>
+                </td>
+
+            </tr>
+            <tr>
+                <td>date of birth:</td>
+                <td><input type="date" name="date" placeholder="YY/MM/DD" onchange="dobValidate(this)" id="date"></td>
+                <td>
+                    <p id="errormsg" style="color: red;"> </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <div><input type="radio" name="gender" value="male">male
+                        <input type="radio" name="gender" value="female">female
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Education:</td>
+                <td>
+                    <div>
+                        <select id="slct1" onchange="populate(this.id,'slct2')">
+                            <option value="">Stream</option>
+                            <optgroup label="Technical">
+                                <option value="Btech">Btech</option>
+                                <option value="Mtech">Mtech</option>
+                            </optgroup>
+                            <optgroup label="Non Technical">
+                                <option value="MBA">MBA</option>
+                                <option value="Law">Law</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>Choose Certification:</td>
+                <td>
+                    <div id="slct2"></div>
+                    <div id="slct2"></div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Upload your Certification:</td>
+                <td><input type="file" name="fileupload" accept="image/*"></td>
+
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" onsubmit="validateForm()"></td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+
+</html>
