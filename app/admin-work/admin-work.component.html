@@ -1,0 +1,54 @@
+<table  style="background-color:rgb(247, 225, 225);">
+    <tr>
+        <td> Enter  Restaurant Id </td>
+        <td> <input type="text" #resId/> </td>
+    </tr>
+    <tr>
+        <td> Enter  Restaurant Name </td>
+        <td> <input type="text" #resName/> </td>
+    </tr>
+    <tr>
+        <td> Restaurant Owner </td>
+        <td> <input type="text" #owner/> </td>
+    </tr>
+    <tr>
+        <td>Location</td>
+        <td> 
+            <select #location>
+                <option> Hyderabad </option>
+                <option> Mumbai </option>
+                <option> Bengalore </option>
+                <option> Chennai </option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td> category </td>
+        <td> <input type="text" #category/> </td>
+    </tr>
+    <tr>
+        <td> Ratings </td>
+        <td> <input type="text" #ratings/> </td>
+    </tr>
+    <tr>
+        <td> Discription </td>
+        <td> <input type="text" #discription/> </td>
+    </tr>
+    <tr>
+        <td> Contact Number </td>
+        <td> <input type="text" #contnumber/> </td>
+    </tr>
+    <tr>
+        <td> Image Name </td>
+        <td> <input type="text" #image/> </td>
+    </tr>
+    <tr>
+        <td> <input type="reset" value="Clear All"></td>
+        <td> <input type="button" 
+           (click)="readRestaurant(resId.value,resName.value,location.value,owner.value,category.value,image.value,ratings.value,discription.value,contnumber.value)"
+            value="Add Restaurant" /> </td>
+    </tr>
+    
+
+</table>
+<br/>

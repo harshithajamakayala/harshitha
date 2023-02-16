@@ -1,0 +1,29 @@
+<div style="background-color: rgb(247, 225, 225);">
+    <table>
+        <tr>
+            <td> <img src="/assets/images/{{r.imageName}}" alt=" Restaurant image" width="150px" height="150px">
+            </td>
+            <td>
+                <h2>{{r.restaurantName}} </h2>
+                <hr />
+                <p> {{r.restaurantOwner}} </p>
+                <div [ngSwitch]="r.category">
+                    <div *ngSwitchCase="'veg'" style="color: green;">Pure veg</div>
+                    <div *ngSwitchCase="'both'" style="color: red;">Veg & Non-veg</div>
+                    <div *ngSwitchCase="'non-veg'" style="color: red;">Non-veg</div>
+                </div>
+                <br>
+                Location: {{r.location}} <br />
+                <p>Ratings:{{r.ratings}}</p>
+                <div *ngIf="r.ratings >'4'" style="color: blue;">
+                    Recommended
+                </div>
+                <p>Discription:{{r.discription}}</p>
+                <br>
+                Contact number: {{r.contactNumber}}
+                <hr />
+            </td>
+        </tr>
+        <hr>
+    </table>
+</div>
