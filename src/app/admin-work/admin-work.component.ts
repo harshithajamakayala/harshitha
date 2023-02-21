@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Restaurant } from '../restaurant';
-import { RestaurantOperationsService } from '../restaurant-operations.service';
+import { RestaurantServiceOperationsService } from '../restaurant-service-operations.service';
 
 @Component({
   selector: 'app-admin-work',
@@ -8,27 +8,28 @@ import { RestaurantOperationsService } from '../restaurant-operations.service';
   styleUrls: ['./admin-work.component.css']
 })
 export class AdminWorkComponent {
+  __restaurantService: RestaurantServiceOperationsService;
 
-  __restaurantService: RestaurantOperationsService;
-
-  constructor(restaurantService: RestaurantOperationsService) {
+  constructor(restaurantService: RestaurantServiceOperationsService) {
     this.__restaurantService = restaurantService;
   }
 
-  readRestaurant(restaurantId: string,
-    restaurantName: string,
-    location: string,
-    restaurantOwner: string,
-    category: string,
-    imageName: string,
-    ratings: string,
-    discription:string,
-    contactNumber: string) {
-      console.log(restaurantId+""+restaurantName+""+restaurantOwner+""+location+""+category+""+imageName+""+ratings+""+discription+""+contactNumber);
-      let restaurantFromUser:Restaurant= new Restaurant(parseInt(restaurantId),restaurantName,location,restaurantOwner,category,imageName,ratings,discription,contactNumber)
-      this.__restaurantService.addRestaurants(restaurantFromUser);
+  readRestaurants( restaurantName:string,
+    managerName:string,
+   contactNumber:string,
+    buildingName:string,
+    area:string,
+   streetNo:string,
+   city:string,
+   state:string,
+   country:string,
+   pincode:string,
+   imageName:string){
+    console.log(restaurantName+" "+managerName+" "+contactNumber+" "+buildingName+""+country);
+    let restaurantFromUser:Restaurant= new Restaurant(restaurantName,managerName,contactNumber,buildingName,area,streetNo,city,state,country,pincode,imageName);
+    this.__restaurantService.addRestaurants(restaurantFromUser);
+    
 
   }
-
 
 }
