@@ -1,0 +1,98 @@
+<div style="width: 100%;background-color: rgb(247, 176, 176);align-items: center;">
+  <form style="width: 30%;" (ngSubmit)="submitingRestaurants()" class="form-horizontal">
+    <div class="mb-3">
+      <label class="form-label">Restaurant Id</label>
+      <input type="text" class="form-control" id="resId" [(ngModel)]="r.restaurantId" name="resId" #resId="ngModel"
+        required pattern="[0-9][0-9][0-9]">
+      <div *ngIf="resId.invalid">
+        <span style="color: red;" *ngIf="resId.errors?.['required']">
+
+          Restaurant Id is required Field
+        </span>
+        <span style="color: red;" *ngIf="resId.errors?.['pattern']">
+          Restaurant Id is not valid
+        </span>
+      </div>
+      <span style="color: rgb(4, 205, 51);" *ngIf="resId.valid">
+        Restaurant Id is valid
+      </span>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Restaurant Name</label>
+      <input type="text" class="form-control" [(ngModel)]="r.restaurantName" id="resName" name="resName"
+        #resName="ngModel" required pattern="[0-9]*[a-zA-Z_]+[0-9]*">
+      <div *ngIf="resName.invalid">
+        <span style="color: red;" *ngIf="resName.errors?.['required']">
+
+          Restaurant Name is required Field
+        </span>
+        <span style="color: red;" *ngIf="resName.errors?.['pattern']">
+          Restaurant Name is not valid
+        </span>
+      </div>
+      <span style="color: rgb(4, 205, 51);" *ngIf="resName.valid">
+        Restaurant Name is valid
+      </span>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Restaurant Owner</label>
+      <input type="text" class="form-control" [(ngModel)]="r.restaurantOwner" id="restaurantOwner"
+        name="restaurantOwner">
+    </div>
+    <div class="form-group">
+      <div class="col-auto my-1">
+
+        <label class="mr-sm-2" for="inlineFormCustomerSelect">Location</label>
+        <select class="custom-select mr-sm-2" [(ngModel)]="r.location" id="location" name="location" #location="ngModel"
+          required>
+          <option value=" " disabled selected>Select</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Bengalore">Bengalore</option>
+          <option value="Chennai ">Chennai </option>
+        </select>
+        <div *ngIf="location.invalid">
+          <span style="color: red;" *ngIf="location.errors?.['required']">
+            Location is required Field
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Category</label>
+      <input type="text" class="form-control" [(ngModel)]="r.category" id="category" name="category">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Ratings</label>
+      <input type="text" class="form-control" id="ratings" [(ngModel)]="r.ratings" name="ratings">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Discription</label>
+      <input type="text" class="form-control" [(ngModel)]="r.discription" id="discription" name="discription">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Contact Number</label>
+      <input type="text" class="form-control" [(ngModel)]="r.contactNumber" id="contnumber" name="contnumber"
+        pattern="^((\\+91-?)|0)?[0-9]{10}$" #resNum="ngModel" required>
+      <div *ngIf="resNum.invalid">
+        <span style="color: red;" *ngIf="resNum.errors?.['required']">
+
+          Contact Number is required Field
+        </span>
+        <span style="color: red;" *ngIf="resNum.errors?.['pattern']">
+          Contact Number is not valid
+        </span>
+      </div>
+      <span style="color: rgb(4, 205, 51);" *ngIf="resNum.valid">
+        Contact Number is valid
+      </span>
+
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Image Name</label>
+      <input type="text" class="form-control" [(ngModel)]="r.imageName" id="image" name="image">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
